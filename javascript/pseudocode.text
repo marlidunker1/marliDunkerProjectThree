@@ -1,0 +1,30 @@
+
+
+// SIGN APP PSEUDO
+
+// CREAT MYAPP OBJECT AND SETUP INIT STRUCTURE FOR DOC READY
+
+// CAPTURE USER INPUT
+// 1. Create variable to capture the user input text
+// 2. Prevent default
+// 3. Prevent empty string
+
+// REPLICATE USER INPUT AS H1 BODY  (APPEND HTML ELEMETS)
+// 1. Event binding: input on submit
+// 2. append html element <h1>${what ever the user wrote}</h1}
+// 3. append html: all user buttons
+
+// CHANGING H1
+// 1. Target appended element $(**parentElement**).on(**event**, **targetElement**, function() {}
+// 2. Event binding: button on click
+// 3. a) New event that listens to input button changes font-size ++
+// 3. b) New event that listens to input buttons change font-size -- 
+//
+// 
+
+// STRETCH GOALS:
+
+// TEXT APPEARING IN h1 AS USER TYPING FOR LIVE EDITING
+// BUTTON TO TOGGLE BETWEEN WHITE WRITING / BLACK BACKGROUND AND BLACK WRITING / WHITE BACKGROUND
+//FULL LATIN TRANSLATION (KIDDING -- LOREM IPSUM)
+//3. c) New event that listens to input buttons that change fonts
