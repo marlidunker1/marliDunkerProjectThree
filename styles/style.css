@@ -33,13 +33,14 @@ form {
 
 input {
     width: calc(99% - 62px);
-    border: 2px solid black;
+    border: 2px solid darkorange;
     padding: 5px 10px;   
 }
 
 input::placeholder {
     text-transform: lowercase;
-    color: darkorange;
+    color: black;
+    opacity: 1;
     
 }
 
@@ -91,6 +92,7 @@ h1 {
     text-transform: uppercase;
     margin: 0;
     padding: 0;
+    color: rgba(255, 140, 0, 0.2);
 }
 
 
