@@ -5,8 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Sign App</title>
+    <link rel="stylesheet" href="styles/style.css">
 </head>
-<body>
-    
+<body>   
+    <header>
+        <div class="wrapper">
+            <form>
+                <label for="sign" class="visuallyHidden">Type message to display here</label>
+                <input id="sign" type="text" placeholder="Type Message to display here and hit return">
+                <button type="submit" id="sign">Sign</button>  
+            </form>
+            <div class="signContainer">
+                <h1>Your Sign Will Appear Here</h1>            
+            </div>
+        </div>
+    </header>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="javascript/signApp.js"></script>
 </body>
 </html>
