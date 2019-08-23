@@ -6,18 +6,24 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Sign App</title>
     <link rel="stylesheet" href="styles/style.css">
+    <script src="https://kit.fontawesome.com/78737df333.js"></script>
 </head>
 <body>   
     <header>
         <div class="wrapper">
-            <form>
-                <label for="sign" class="visuallyHidden">Type message to display here</label>
-                <input id="sign" type="text" placeholder="Type Message to display here and hit return">
-                <button type="submit" id="sign">Sign</button>  
+            <form class="sign">
+                <label for="sign" class="visuallyHidden">Type here to display sign below</label>
+                <input maxlength="40" id="sign" type="text" placeholder="Type here and hit return to display sign below">
+                <button type="submit" id="sign" class="signButton">Sign</button>  
             </form>
             <div class="signContainer">
                 <h1>Your Sign Will Appear Here</h1>            
             </div>
+            <form class="sizeButtons">
+                <!-- BUTTONS GOING TO APPEAR HERE -->
+                <button type="submit" class="smaller" aria-label="Make font smaller" aria-hidden="true"><i class="fas fa-minus-circle"></i></button>
+                <button type="submit" class="bigger" aria-label="Make font larger" aria-hidden="true"><i class="fas fa-plus-circle"></i></button>
+            </form> 
         </div>
     </header>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
