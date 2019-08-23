@@ -1,27 +1,33 @@
 const signApp = {};
+signApp.userInput = '';
+
 signApp.signType = () => {
     $('input#sign').on('keyup', (e) => {
-        let userInput = $('input').val();
-            
-        if (e.keyCode !== 13) {
-            $('h1').text(`${userInput}`);
+        
+        signApp.userInput = $('input').val();
+
+        if (e.keyCode !== 13 && signApp.userInput != '') {
+            $('h1').text(`${signApp.userInput}`).css('color', 'black');
+        } else if (e.keyCode !== 13 && signApp.userInput=== ''){
+            $('h1').text(`Type!`).css('color', 'red');
+            $("form.sizeButtons").css("visibility", "hidden"); 
         }
     });
-    // $('input#sign').focus(); //LOOKING TO FOCUS //ALSO SHIFT PROBLEM
 }
 
 signApp.userSign = () => {
     $('form.sign').on('submit', (e) => {
         e.preventDefault();
 
-        let userInput = $('input').val();
-
-        if (userInput !== '') {
+        
+        if (signApp.userInput !== '') {
             $('input').val('');
             $("form.sizeButtons").css("visibility", "visible"); 
-            $('h1').css('color', 'rgba(0, 0, 0, 1)');          
-        } else if (userInput === '') {
-            $('h1').text("Type field above is required").css('color', 'red');
+            $('h1').css('color', 'rgba(0, 0, 0, 1)'); 
+            // $('.signButton').attr("disabled", true);         
+        } else if (signApp.userInput === '') {
+            $('h1').text("Type!").css('color', 'red');
+            $("form.sizeButtons").css("visibility", "hidden"); 
         }
     });
 }
@@ -44,5 +50,6 @@ $(document).ready( () => {
     signApp.signType();
     signApp.userSign();
     signApp.biggerSmaller();
+    $('input#sign').focus();
 });
 
