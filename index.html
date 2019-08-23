@@ -13,15 +13,17 @@
         <div class="wrapper">
             <form class="sign">
                 <label for="sign" class="visuallyHidden">Type here to display sign below</label>
-                <input maxlength="40" id="sign" type="text" placeholder="Type here and hit return to display sign below">
+                <input maxlength="40" id="sign" type="text" placeholder="Type here and then hit return">
                 <button type="submit" id="sign" class="signButton">Sign</button>  
             </form>
             <div class="signContainer">
+                <span></span>
                 <h1>Your Sign Will Appear Here</h1>            
             </div>
             <form class="sizeButtons">
-                <button type="submit" id="smaller" aria-label="Make font smaller" aria-hidden="true"><i class="fas fa-minus-circle"></i></button>
-                <button type="submit" id="bigger" aria-label="Make font larger" aria-hidden="true"><i class="fas fa-plus-circle"></i></button>
+                <button type="submit" id="smaller" aria-label="Make font smaller" aria-hidden="true"><i class="fas fa-minus"></i></button>
+                <button type="submit" id="reset" aria-label="Rest the application" aria-hidden="true"><i class="fas fa-toilet"></i></button>
+                <button type="submit" id="bigger" aria-label="Make font larger" aria-hidden="true"><i class="fas fa-plus"></i></button>
             </form> 
         </div>
     </header>
