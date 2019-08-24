@@ -12,6 +12,10 @@ html {
     font-size: 125%;
 }
 
+.blackBackground {
+    background: black;
+}
+
 header {
     height: 100vh;
 }
@@ -93,6 +97,11 @@ h1 {
     margin: 0;
     padding: 0;
     color: rgba(255, 140, 0, 0.2);
+}
+
+.yinYang {
+    color: white !important; 
+    /* Is important cheating? */
 }
 
 

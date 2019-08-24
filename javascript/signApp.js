@@ -7,7 +7,7 @@ signApp.signType = () => {
         signApp.userInput = $('input').val();
 
         if (e.keyCode !== 13 && signApp.userInput != '') {
-            $('h1').text(`${signApp.userInput}`).css('color', 'black');
+            $('h1').text(`${signApp.userInput}`).css('color', 'inherit');
         } else if (e.keyCode !== 13 && signApp.userInput=== ''){
             $('h1').text(`Type!`).css('color', 'red');
             $("form.sizeButtons").css("visibility", "hidden"); 
@@ -41,8 +41,12 @@ signApp.biggerSmaller = () => {
         e.preventDefault();
         $('h1').css('font-size','+=5');
     });
+    $('#yinYang').on('click', (e) => {
+        e.preventDefault();
+        $('html').toggleClass('blackBackground');
+        $('h1').toggleClass('yinYang');
+    });
     $('#reset').on('click', () => {
-        //THIS IS RUNNING THE DEFAULT SO THE PAGE RESETS WHEN THE BUTTON IS CLICKED
     });
 }
 
