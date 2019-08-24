@@ -46,8 +46,6 @@ signApp.biggerSmaller = () => {
         $('html').toggleClass('blackBackground');
         $('h1').toggleClass('yinYang');
     });
-    $('#reset').on('click', () => {
-    });
 }
 
 $(document).ready( () => {
