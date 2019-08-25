@@ -1,0 +1,30 @@
+@media (max-width: 780px) {
+
+    h1 {
+        font-size: 4rem;
+    }
+}
+
+@media (max-width: 660px) {
+    
+    input {
+        width: calc(97% - 40px);
+        border: 2px solid darkorange;
+    }
+
+    html {
+        font-size: 100%;
+    }
+
+    h1 {
+        font-size: 3rem;
+        line-height: 5rem;
+    }
+
+    button {
+        width: 40px;
+        padding: 5px 10px;
+        border: 2px solid darkorange;
+        background: darkorange;
+    }
+}
