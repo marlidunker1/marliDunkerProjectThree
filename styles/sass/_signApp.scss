@@ -2,11 +2,8 @@
 
 html {
     font-size: 125%;
+    color: black;
      
-}
-
-.blackBackground {
-    background: black;
 }
 
 header {
@@ -95,12 +92,28 @@ h1 {
     padding: 0;
     color: rgba(255, 140, 0, 0.2);
     max-width: 100%;
-    word-wrap: break-word;
-    
-    
+    word-wrap: break-word;    
+}
+
+// JS CLASSES
+
+.blackBackground {
+    background: black;
+    color: white;
 }
 
 .yinYang {
-    color: white !important; 
-    /* Is important cheating? */
+    color: rgba(255, 255, 255, 1); 
+}
+
+.black {
+    color: black;
+}
+
+.white {
+    color: white;
+}
+
+.error {
+    color: red;
 }

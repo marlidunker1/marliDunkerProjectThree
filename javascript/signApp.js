@@ -1,17 +1,24 @@
 const signApp = {};
-signApp.userInput = '';
-
 signApp.signType = () => {
+    $('input#sign').on('keydown', (e) => {
+        if (e.keyCode === 32 &&  e.target.selectionStart === 0) {
+            return false;
+        }
+    });
+
     $('input#sign').on('keyup', (e) => {
         
-        signApp.userInput = $('input').val();
+        signApp.userInput = $('input').val(); 
 
-        if (e.keyCode !== 13 && signApp.userInput != '') {
-            $('h1').text(`${signApp.userInput}`).css('color', 'inherit');
-        } else if (e.keyCode !== 13 && signApp.userInput=== ''){
-            $('h1').text(`Type!`).css('color', 'red');
+
+        if ((e.keyCode !== 13 && signApp.userInput != '') && $('html').hasClass('')) {
+            $('h1').text(`${signApp.userInput}`).addClass('black').removeClass('error');
+        } else if ((e.keyCode !== 13 && signApp.userInput != '') && $('html').hasClass('blackBackground')) {
+            $('h1').text(`${signApp.userInput}`).addClass('white').removeClass('error');
+        } else if (e.keyCode !== 13 && signApp.userInput === ''){
+            $('h1').text(`Type!`).addClass('error');
             $("form.sizeButtons").css("visibility", "hidden"); 
-        }
+        } 
     });
 }
 
@@ -20,13 +27,16 @@ signApp.userSign = () => {
         e.preventDefault();
 
         
-        if (signApp.userInput !== '') {
+        if ((signApp.userInput !== '') && $('html').hasClass('')) {
             $('input').val('');
             $("form.sizeButtons").css("visibility", "visible"); 
-            $('h1').css('color', 'rgba(0, 0, 0, 1)'); 
-            // $('.signButton').attr("disabled", true);         
+            $('h1').addClass('black').removeClass('error'); 
+        } else if ((signApp.userInput !== '') && $('html').hasClass('blackBackground')) {
+            $('input').val('');
+            $("form.sizeButtons").css("visibility", "visible"); 
+            $('h1').addClass('white').removeClass('error');
         } else if (signApp.userInput === '') {
-            $('h1').text("Type!").css('color', 'red');
+            $('h1').text("Type!").addClass('error');
             $("form.sizeButtons").css("visibility", "hidden"); 
         }
     });
@@ -44,7 +54,7 @@ signApp.biggerSmaller = () => {
     $('#yinYang').on('click', (e) => {
         e.preventDefault();
         $('html').toggleClass('blackBackground');
-        $('h1').toggleClass('yinYang');
+        $('h1').toggleClass('white', 'black');
     });
 }
 
