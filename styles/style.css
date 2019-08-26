@@ -281,6 +281,8 @@ form.sizeButtons {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 h1 {
@@ -288,13 +290,15 @@ h1 {
   text-align: center;
   letter-spacing: -3px;
   word-spacing: 20px;
-  line-height: 7rem;
+  line-height: 8rem;
   text-transform: uppercase;
   margin: 0;
   padding: 0;
   color: rgba(255, 140, 0, 0.2);
   max-width: 100%;
   word-wrap: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .blackBackground {
@@ -334,7 +338,7 @@ h1 {
   }
   h1 {
     font-size: 3rem;
-    line-height: 5rem;
+    line-height: 7rem;
   }
   button {
     width: 40px;

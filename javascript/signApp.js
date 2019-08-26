@@ -45,11 +45,11 @@ signApp.userSign = () => {
 signApp.biggerSmaller = () => {
     $('#smaller').on('click', (e) => {
         e.preventDefault();
-        $('h1').css('font-size','-=5');
+        $('h1').css('font-size','-=10');
     });
     $('#bigger').on('click', (e) => {
         e.preventDefault();
-        $('h1').css('font-size','+=5');
+        $('h1').css('font-size','+=10');
     });
     $('#yinYang').on('click', (e) => {
         e.preventDefault();
